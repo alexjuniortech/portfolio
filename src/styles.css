@@ -1,0 +1,125 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 6px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-code-key: var(--code-key);
+  --color-code-dim: var(--code-dim);
+  --font-display: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.375rem;
+  /* Dark by default — near-black base with a single acid-lime accent */
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card: #111111;
+  --card-foreground: #ededed;
+  --popover: #111111;
+  --popover-foreground: #ededed;
+  --primary: #c6f432;
+  --primary-foreground: #0a0a0a;
+  --secondary: #161616;
+  --secondary-foreground: #ededed;
+  --muted: #161616;
+  --muted-foreground: #8b8b8b;
+  --accent: #1a1a1a;
+  --accent-foreground: #ededed;
+  --destructive: #ef4444;
+  --border: rgb(255 255 255 / 8%);
+  --border-strong: rgb(255 255 255 / 16%);
+  --input: rgb(255 255 255 / 10%);
+  --ring: #c6f432;
+  --code-key: #d4d4d4;
+  --code-dim: #4a4a4a;
+}
+
+.light {
+  --background: #fafaf7;
+  --foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+  --primary: #4d7c0f;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f0ec;
+  --secondary-foreground: #111111;
+  --muted: #f0f0ec;
+  --muted-foreground: #5c5c5c;
+  --accent: #ecece6;
+  --accent-foreground: #111111;
+  --border: rgb(0 0 0 / 9%);
+  --border-strong: rgb(0 0 0 / 18%);
+  --input: rgb(0 0 0 / 12%);
+  --ring: #4d7c0f;
+  --code-key: #333333;
+  --code-dim: #b0b0b0;
+}
+
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-inline: 1rem;
+  @media (width >= 48rem) {
+    padding-inline: 1.5rem;
+  }
+}
+
+@utility kicker {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+@utility glow-primary {
+  box-shadow: 0 0 24px -6px color-mix(in oklab, var(--primary) 70%, transparent);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+}
