@@ -28,7 +28,7 @@ export const pt: Translation = {
     kicker: "Sobre",
     title: "Engenharia de <hl>sistemas confiáveis</hl> e liderança de times que <hl>entregam</hl>.",
     p1: "Sou engenheiro de software sênior com mais de 13 anos de experiência no desenvolvimento de soluções para ambientes corporativos, com foco em arquitetura de software, desenvolvimento backend e liderança técnica.",
-    p2: "Participei da evolução de aplicações monolíticas para arquiteturas modernas e desenvolveu APIs de alta performance, microsserviços e soluções escaláveis. Atuo principalmente com Node.js, PHP, Docker, Kubernetes, PostgreSQL, Redis, MongoDB e plataformas em nuvem (AWS, GCP).",
+    p2: "Participei da evolução de aplicações monolíticas para arquiteturas modernas e desenvolvi APIs de alta performance, microsserviços e soluções escaláveis. Atuo principalmente com Node.js, PHP, Docker, Kubernetes, PostgreSQL, Redis, MongoDB e plataformas em nuvem (AWS, GCP).",
     p3: "Apoio equipes de engenharia por meio de revisões de código, definição de arquitetura e melhoria contínua dos processos, sempre buscando sistemas confiáveis, escaláveis e de fácil manutenção.",
     p4: "Além do desenvolvimento, atuo apoiando equipes de engenharia por meio de revisões de código, definição de arquitetura, mentoria técnica e melhoria contínua dos processos de desenvolvimento.",
     stats: {
